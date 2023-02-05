@@ -1,13 +1,10 @@
 <div *ngIf="player !== undefined" class="details">
   <img class="player__picture" src="{{ player.picture }}" />
-  <div>
+  <div class="player__content">
     <div class="header">
       <div class="player__name">
-        {{ player.firstname }} {{ player.lastname }}
-      </div>
-      <div class="country">
-        <img class="country__picture" src="{{ player.country.picture }}" />
-        <div class="country__code">{{ player.country.code }}</div>
+        <div class="player__first__name">{{ player.firstname }}</div>
+        <div class="player__last__name">{{ player.lastname }}</div>
       </div>
     </div>
     <div class="player__stats">
@@ -26,13 +23,33 @@
     </div>
     <div class="player__stats">
       <div>
+        <div class="player__stats__title">LAST 5 GAMES</div>
+        <div class="player__stats__value last__games">
+          <div *ngFor="let game of player.data.last">
+            {{ game === 1 ? "🟢" : "🔴" }}
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="player__stats__title">AGE</div>
+        <div class="player__stats__value">{{ player.data.age }}</div>
+      </div>
+    </div>
+    <div class="player__stats">
+      <div>
         <div class="player__stats__title">WEIGHT</div>
-        <div class="player__stats__value">{{ player.data.weight }}</div>
+        <div class="player__stats__value">
+          {{ player.data.weight / 1000 }} kg
+        </div>
       </div>
       <div>
         <div class="player__stats__title">HEIGHT</div>
-        <div class="player__stats__value">{{ player.data.height }}</div>
+        <div class="player__stats__value">{{ player.data.height }} cm</div>
       </div>
     </div>
+  </div>
+  <div class="country">
+    <img class="country__picture" src="{{ player.country.picture }}" />
+    <div class="country__code">{{ player.country.code }}</div>
   </div>
 </div>

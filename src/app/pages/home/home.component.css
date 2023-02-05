@@ -1,15 +1,15 @@
 .home {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
 }
 
 .recherche {
-  width: 300px;
+  margin: auto;
+  width: 100%;
   height: 30px;
   border: 0;
-  padding-left: 10px;
   font-weight: bold;
   opacity: 60%;
-  border-radius: 10px;
+  border-radius: 5px;
 }

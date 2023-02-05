@@ -9,6 +9,7 @@ import { PlayerService } from 'src/app/services/player.service'
 })
 export class HomeComponent implements OnInit {
   players: Player[]
+  recherche: string = ''
 
   constructor(private playerService: PlayerService) {
     this.playerService.getPlayers().subscribe((players) => {
@@ -17,4 +18,17 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  search(recherche: string) {
+    this.recherche = recherche
+    this.playerService.getPlayers().subscribe((players) => {
+      this.players = players.filter((player) => {
+        return (
+          player.firstname.toLowerCase().includes(recherche) ||
+          player.lastname.toLowerCase().includes(recherche) ||
+          recherche === ''
+        )
+      })
+    })
+  }
 }

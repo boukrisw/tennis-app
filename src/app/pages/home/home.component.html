@@ -1,7 +1,17 @@
 <div class="home">
-  <input class="recherche" placeholder="Rechercher un joueur" />
-  <app-player-card
-    *ngFor="let player of players"
-    [player]="player"
-  ></app-player-card>
+  <div class="sub__section">
+    <input
+      class="recherche"
+      placeholder="Rechercher un joueur"
+      type="text"
+      [(ngModel)]="recherche"
+      [ngModel]="recherche"
+      (ngModelChange)="search($event)"
+    />
+    <app-player-card
+      *ngFor="let player of players"
+      [player]="player"
+    ></app-player-card>
+  </div>
+  <players-statistics></players-statistics>
 </div>

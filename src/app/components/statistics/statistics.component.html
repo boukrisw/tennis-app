@@ -1,0 +1,15 @@
+<div *ngIf="statistics" class="container">
+  <h2 class="title">Statistiques</h2>
+  <div class="sub__container">
+    <h3>IMC moyen de tous les joueurs:</h3>
+    <span>{{ statistics.imc | number : "1.2-2" }}</span>
+  </div>
+  <div class="sub__container">
+    <h3>La médiane de la taille des joueurs:</h3>
+    <span>{{ statistics.medianHeight }} cm</span>
+  </div>
+  <div class="sub__container">
+    <h3>Pays qui a le plus grand ratio de parties gagnées:</h3>
+    <img class="country__picture" src="{{ statistics.country.picture }}" />
+  </div>
+</div>

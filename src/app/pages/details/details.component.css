@@ -6,6 +6,11 @@
   display: flex;
 }
 
+.player__picture {
+  position: relative;
+  left: -15%;
+}
+
 .header {
   display: flex;
 }
@@ -14,8 +19,19 @@
   color: #f2753b;
   font-size: 45px;
   font-weight: bold;
+  font-weight: 600;
   margin-top: 100px;
-  margin-bottom: 50px;
+}
+
+.player__first__name {
+  color: white;
+  text-shadow: -1px -1px 0 #f2753b, 1px -1px 0 #f2753b, -1px 1px 0 #f2753b,
+    1px 1px 0 #f2753b;
+}
+
+.player__last__name {
+  color: #f2753b;
+  font-weight: 700;
 }
 
 .player__stats {
@@ -43,8 +59,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 100px;
 }
 
 .country__picture {
@@ -56,4 +72,15 @@
   opacity: 30%;
   font-size: 50px;
   font-weight: lighter;
+}
+
+.player__content {
+  flex: 1;
+}
+
+.last__games {
+  display: flex;
+}
+.last__games > * {
+  margin-right: 5px;
 }

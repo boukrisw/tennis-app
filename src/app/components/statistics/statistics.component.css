@@ -1,0 +1,37 @@
+.container {
+  background: white;
+  border-radius: 5px;
+  padding: 5%;
+  margin: 5%;
+  margin-top: 5%;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.title {
+  color: #f2753b;
+  font-family: Montserrat;
+}
+
+h3 {
+  color: #000000;
+  opacity: 70%;
+}
+
+span {
+  margin-left: 10px;
+  color: #f2753b;
+  font-size: large;
+  font-weight: 900;
+  opacity: 100%;
+}
+
+.sub__container {
+  display: flex;
+  align-items: center;
+}
+
+.country__picture {
+  height: 50px;
+  border: solid thin gray;
+  border-radius: 5px;
+}

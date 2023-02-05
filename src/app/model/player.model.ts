@@ -1,6 +1,3 @@
-/**
- * Classe représentant un matériel (CF ou Groupe)
- */
 export class Player {
   id: number
   firstname: string
