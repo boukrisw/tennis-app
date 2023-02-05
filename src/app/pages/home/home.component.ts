@@ -24,8 +24,8 @@ export class HomeComponent implements OnInit {
     this.playerService.getPlayers().subscribe((players) => {
       this.players = players.filter((player) => {
         return (
-          player.firstname.toLowerCase().includes(recherche) ||
-          player.lastname.toLowerCase().includes(recherche) ||
+          player.firstname.toLowerCase().includes(recherche.toLowerCase()) ||
+          player.lastname.toLowerCase().includes(recherche.toLowerCase()) ||
           recherche === ''
         )
       })
