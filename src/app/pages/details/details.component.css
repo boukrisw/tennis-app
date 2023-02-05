@@ -1,0 +1,59 @@
+.details {
+  margin: auto;
+  height: 80vh;
+  width: 80vw;
+  background: white;
+  display: flex;
+}
+
+.header {
+  display: flex;
+}
+
+.player__name {
+  color: #f2753b;
+  font-size: 45px;
+  font-weight: bold;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.player__stats {
+  display: flex;
+  margin-top: 50px;
+}
+
+.player__stats > * {
+  margin-right: 20px;
+}
+
+.player__stats__title {
+  color: #000000;
+  opacity: 30%;
+  font-size: small;
+}
+
+.player__stats__value {
+  color: #f2753b;
+  font-size: small;
+  font-weight: 400;
+}
+
+.country {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 40px;
+}
+
+.country__picture {
+  height: 100px;
+}
+
+.country__code {
+  color: #000000;
+  opacity: 30%;
+  font-size: 50px;
+  font-weight: lighter;
+}

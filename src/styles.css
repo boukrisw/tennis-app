@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --orange--color: #f2753b;
+  --orange-light-color: #ebad65;
+  --black-color: #000000, 30% opacity;
+}
+
+html,
+body {
+  background: url("./assets/tennis.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Mulish";
+  font-weight: bold;
+}
